@@ -7,20 +7,22 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* 기본 */
+/* base */
 html {
-  font-size: 62.5%;
+  font-size: 70.5%;
   scroll-behavior: smooth;
-}
-
-body,
-html {
   height: 100%;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* 배경 비디오 */
+body {
+  height: 100%;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* bg-vid */
 .video-bg {
   position: fixed;
   top: 0;
@@ -37,8 +39,6 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  animation: fadeOverlay 6s ease-in-out infinite alternate;
   z-index: -1;
 }
 
@@ -51,7 +51,6 @@ html {
   }
 }
 
-/* 오버레이 메뉴 */
 .overlay {
   z-index: 9;
   position: fixed;
@@ -100,7 +99,7 @@ nav li a:hover {
   transform: scale(1.2);
 }
 
-/* 메뉴 애니메이션 */
+/* menu animation */
 .slide-in-1 {
   animation: slide-in 0.4s linear 0.2s both;
 }
@@ -151,7 +150,7 @@ nav li a:hover {
   }
 }
 
-/* 햄버거 버튼 */
+/* stacked(?) buttons */
 .hamburger-menu {
   position: fixed;
   top: 1rem;
@@ -175,7 +174,7 @@ nav li a:hover {
   margin-left: auto;
 }
 
-/* 햄버거 애니메이션 */
+/* stacked button animation */
 .active .menu-bar1 {
   transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
 }
@@ -186,7 +185,7 @@ nav li a:hover {
   transform: rotate(45deg) translate(-0.6rem, -0.8rem);
 }
 
-/* 메인 콘텐츠 */
+/* main contents */
 .content {
   position: relative;
   height: 100vh;
@@ -251,6 +250,97 @@ p.lead {
 section {
   width: 100%;
   height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #fff;
+  padding: 2rem;
+}
+
+section h1.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  letter-spacing: 0.15rem;
+  margin-bottom: 1.25rem;
+  animation: section-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes section-glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #4facfe, 0 0 20px #4facfe;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #00f2fe, 0 0 40px #00f2fe;
+  }
+}
+.glass {
+  background: rgba(120, 120, 120, 0.005);
+  border: 1px solid rgba(137, 137, 137, 0.162);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.section-body {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+/*for icons*/
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+}
+.project-thumb {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.skill-row .label {
+  min-width: 110px;
+  text-align: left;
+}
+.form-control.bg-glass {
+  background: transparent;
+  backdrop-filter: blur(100px);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.badge.skill-badge {
+  font-size: 1.4rem; /* 글자 크기 ↑ (기본 0.75rem) */
+  padding: 0.6rem 1.2rem; /* 안쪽 여백 ↑ */
+  border-radius: 999px; /* pill 느낌 더 강조 */
+}
+
+.progress {
+  height: 2.2rem; /* 바 높이 (기본 1rem → 2.2rem) */
+  border-radius: 12px;
+}
+
+.progress-bar {
+  font-size: 1.2rem; /* 퍼센트 텍스트 크기 ↑ */
+  font-weight: 600;
+  line-height: 2.2rem; /* 진행바 중앙에 텍스트 정렬 */
+}
+.progress-bar.bg-purple {
+  background-color: #9b59b6; /* 보라색 */
 }
