@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Dreams — Seo Youngjun (서영준)</title>
+    <meta
+      name="description"
+      content="Dreams 테마의 개인 소개 페이지 — 서영준 (컴퓨터공학 학생)"
+    />
+
+    <!-- Bootstrap (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <style>
+      :root {
+        --dream-bg: #0b1020; /* 배경: 밤하늘 */
+        --dream-surface: #11162a; /* 카드 배경 */
+        --dream-text: #e8ebff; /* 본문 텍스트 */
+        --dream-muted: #b6bce6; /* 보조 텍스트 */
+        --dream-accent: #7c8cff; /* 포인트 컬러 */
+        --dream-accent-2: #22d3ee; /* 포인트 2 */
+        --radius: 16px;
+        --shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+      }
+      [data-theme="light"] {
+        --dream-bg: #ffffff;
+        --dream-surface: #f3f6ff;
+        --dream-text: #121635;
+        --dream-muted: #5b6390;
+        --dream-accent: #5b6cff;
+        --dream-accent-2: #22d3ee;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: radial-gradient(
+            900px 600px at 10% -5%,
+            rgba(124, 140, 255, 0.35),
+            transparent 60%
+          ),
+          radial-gradient(
+            800px 520px at 90% -10%,
+            rgba(34, 211, 238, 0.22),
+            transparent 70%
+          ),
+          var(--dream-bg);
+        color: var(--dream-text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .dream-surface {
+        background: var(--dream-surface);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .dream-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--dream-accent),
+          var(--dream-accent-2)
+        );
+      }
+      .text-muted {
+        color: var(--dream-muted) !important;
+      }
+
+      .navbar {
+        backdrop-filter: blur(8px) saturate(160%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .brand-mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 10px;
+        background: linear-gradient(
+          135deg,
+          var(--dream-accent),
+          var(--dream-accent-2)
+        );
+        box-shadow: 0 4px 12px rgba(124, 140, 255, 0.35);
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        overflow: hidden;
+      }
+      .stars {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.35;
+      }
+      .stars::before,
+      .stars::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(2px 2px at 10% 20%, #fff, transparent 40%),
+          radial-gradient(1.5px 1.5px at 30% 10%, #fff, transparent 40%),
+          radial-gradient(1.8px 1.8px at 80% 15%, #fff, transparent 40%),
+          radial-gradient(1.2px 1.2px at 15% 70%, #fff, transparent 40%),
+          radial-gradient(2px 2px at 75% 80%, #fff, transparent 40%),
+          radial-gradient(1.4px 1.4px at 50% 60%, #fff, transparent 40%);
+        animation: twinkle 6s infinite alternate ease-in-out;
+      }
+      .stars::after {
+        transform: translateY(10px);
+      }
+      @keyframes twinkle {
+        from {
+          opacity: 0.15;
+        }
+        to {
+          opacity: 0.45;
+        }
+      }
+
+      /* Cards */
+      .dream-card {
+        background: var(--dream-surface);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      /* Buttons */
+      .btn-dream {
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          var(--dream-accent),
+          var(--dream-accent-2)
+        );
+      }
+      .btn-dream:hover {
+        filter: brightness(1.05);
+      }
+      .btn-ghost {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: var(--dream-text);
+        background: transparent;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg" style="background: transparent">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <span class="brand-mark"></span>
+          <strong>Dreams · 서영준</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dreamboard">Dreamboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-ghost ms-lg-2"
+                aria-pressed="false"
+              >
+                🌗 Theme
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero py-5" id="top">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="container py-4">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <span
+              class="badge rounded-pill text-bg-secondary"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  var(--dream-accent),
+                  var(--dream-accent-2)
+                );
+              "
+              >Theme: Dreams</span
+            >
+            <h1 class="display-5 fw-bold mt-3">
+              안녕하세요,
+              <span
+                class="text-decoration-underline"
+                style="text-decoration-color: var(--dream-accent)"
+                >서영준</span
+              >입니다.
+            </h1>
+            <p class="lead text-muted mt-2">
+              컴퓨터공학(Computer Science) 학생으로서, 꿈을 설계하고 코드를 통해
+              실험합니다. 이 페이지는 저의 소개와
+              Dreamboard(이제·다음·언젠가)입니다.
+            </p>
+            <div class="d-flex gap-2 flex-wrap mt-3">
+              <a href="#dreamboard" class="btn btn-dream btn-lg"
+                >Dreamboard 보기</a
+              >
+              <a href="#about" class="btn btn-ghost btn-lg">About</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="dream-card p-4">
+              <!-- 인라인 아바타 SVG (외부 리소스 없음) -->
+              <svg
+                aria-label="avatar"
+                viewBox="0 0 800 600"
+                class="w-100"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+              >
+                <defs>
+                  <radialGradient id="bg" cx="30%" cy="20%" r="90%">
+                    <stop offset="0%" stop-color="#7c8cff" />
+                    <stop offset="100%" stop-color="#22d3ee" />
+                  </radialGradient>
+                </defs>
+                <rect width="800" height="600" rx="24" fill="url(#bg)" />
+                <circle cx="280" cy="230" r="90" fill="#fff" opacity=".92" />
+                <rect
+                  x="170"
+                  y="340"
+                  width="220"
+                  height="130"
+                  rx="70"
+                  fill="#fff"
+                  opacity=".92"
+                />
+                <text
+                  x="280"
+                  y="240"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-family="ui-sans-serif, Segoe UI, Roboto, Helvetica, Arial"
+                  font-size="88"
+                  fill="#121635"
+                >
+                  SY
+                </text>
+              </svg>
+              <p class="text-muted mb-0 small">
+                (이미지는 자리표시자입니다. 원하면 본인 사진 또는 일러스트로
+                교체하세요.)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-12 col-lg-6">
+            <div class="dream-card h-100 p-4">
+              <h2 class="h4 mb-3">About</h2>
+              <p class="text-muted">
+                컴퓨터공학을 공부하며, 작은 실험을 자주 배포하는 루틴을
+                좋아합니다. 이 페이지는 외부 정보 없이 프로젝트 폴더의 내용만을
+                바탕으로 구성되었습니다.
+              </p>
+              <ul class="mb-0">
+                <li>🧠 알고리즘 · 자료구조 — 문제 해결 루틴 만들기</li>
+                <li>🖥️ 웹(HTML/CSS/JS) — 가볍게 만들고 바로 배포</li>
+                <li>🧪 프로젝트 — 작게 만들고 자주 Ship</li>
+                <li>📚 학습 정리 — 노트/리딩 요약 기록</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="dream-card h-100 p-4">
+              <h2 class="h4 mb-3">Motto</h2>
+              <p class="mb-2">Dreams → Plan → Ship.</p>
+              <p class="text-muted">
+                크게 꿈꾸되, 작은 단위로 계획하고, 빠르게 배포하기.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dreamboard -->
+    <section id="dreamboard" class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h4 mb-0">Dreamboard</h2>
+          <span class="text-muted">Now • Next • Someday</span>
+        </div>
+        <div class="row g-3">
+          <div class="col-12 col-md-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h5">Now</h3>
+              <ul class="mb-0">
+                <li>이 페이지를 GitHub Pages에 배포</li>
+                <li>자료구조/알고리즘 풀이 루틴 만들기</li>
+                <li>GitHub 프로필 정리(README, 핀 저장소)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h5">Next</h3>
+              <ul class="mb-0">
+                <li>작은 풀스택 토이 프로젝트 1개 출시</li>
+                <li>오픈소스 PR 1회 도전</li>
+                <li>스터디/네트워킹 참여 및 기록</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h5">Someday</h3>
+              <ul class="mb-0">
+                <li>실무 인턴십 경험 및 포트폴리오 강화</li>
+                <li>개인 프로젝트/서비스 정식 출시</li>
+                <li>기술 블로그 10편 이상 연재</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (placeholder only, 외부 링크 없음) -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="h4 mb-3">Projects</h2>
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h6 mb-2">Algorithm Notes</h3>
+              <p class="text-muted">
+                자료구조/알고리즘 문제풀이 기록(요약/복기용).
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h6 mb-2">Mini Web App</h3>
+              <p class="text-muted">HTML/JS만으로 구현한 작은 실험들.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="dream-card h-100 p-4">
+              <h3 class="h6 mb-2">Study Logs</h3>
+              <p class="text-muted">읽은 자료 요약 및 회고.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="dream-card p-4">
+          <h2 class="h5 mb-2">Contact</h2>
+          <p class="mb-1">
+            이메일: <span class="text-muted">(추가 예정)</span>
+          </p>
+          <p class="mb-0">
+            GitHub/포트폴리오 링크: <span class="text-muted">(추가 예정)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5">
+      <div class="container">
+        <div
+          class="dream-card p-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3"
+        >
+          <div>
+            <h3 class="h5 mb-1">“Dream big. Plan small. Ship often.”</h3>
+            <p class="text-muted mb-0">
+              이 페이지는 프로젝트 폴더 정보만으로 작성되었습니다.
+            </p>
+          </div>
+          <a href="#top" class="btn btn-dream">맨 위로</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2"
+      >
+        <div>© <span id="year"></span> Seo Youngjun (서영준)</div>
+        <div class="text-muted small">GitHub Pages로 무료 호스팅 가능</div>
+      </div>
+    </footer>
+
+    <script>
+      // 연도 표기
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // 테마 토글 (light/dark)
+      const themeBtn = document.getElementById("themeToggle");
+      const saved = localStorage.getItem("dream-theme");
+      if (saved === "light") document.body.setAttribute("data-theme", "light");
+      themeBtn?.addEventListener("click", () => {
+        const next =
+          document.body.getAttribute("data-theme") === "light" ? "" : "light";
+        if (next) document.body.setAttribute("data-theme", next);
+        else document.body.removeAttribute("data-theme");
+        localStorage.setItem("dream-theme", next || "");
+        themeBtn.setAttribute("aria-pressed", String(next === "light"));
+      });
+    </script>
+  </body>
+</html>
