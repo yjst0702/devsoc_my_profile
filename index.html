@@ -19,6 +19,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <!--custom css-->
     <link rel="stylesheet" href="style.css" />
@@ -53,15 +63,15 @@
         </ul>
       </nav>
     </div>
-    <!--main content-->
 
+    <!--nav bar icon-->
     <div class="hamburger-menu" id="hamburger-menu">
       <div class="menu-bar1"></div>
       <div class="menu-bar2"></div>
       <div class="menu-bar3"></div>
     </div>
 
-    <!-- 메인 콘텐츠 -->
+    <!-- home -->
     <section id="home" class="content center">
       <div>
         <h1 class="glow">Welcome to my profile👋</h1>
@@ -70,7 +80,7 @@
       </div>
     </section>
 
-    <!-- 다른 섹션들 -->
+    <!-- other section -->
     <section id="about">
       <h1 class="section-title">About Me</h1>
 
@@ -111,82 +121,240 @@
     <section id="skills">
       <h1 class="section-title">Skills</h1>
 
-      <div class="section-body glass text-start">
-        <!-- Skill Badges -->
-        <div class="mb-4 text-center">
-          <span
-            class="badge rounded-pill text-bg-info text-dark me-2 mb-2 skill-badge"
-            >Python</span
-          >
-          <span
-            class="badge rounded-pill text-bg-info text-dark me-2 mb-2 skill-badge"
-            >HTML/CSS</span
-          >
-          <span
-            class="badge rounded-pill text-bg-info text-dark me-2 mb-2 skill-badge"
-            >JavaScript</span
-          >
-          <span
-            class="badge rounded-pill text-bg-info text-dark me-2 mb-2 skill-badge"
-            >TypeScript</span
-          >
-          <span
-            class="badge rounded-pill text-bg-info text-dark me-2 mb-2 skill-badge"
-            >Git/GitHub</span
-          >
-        </div>
+      <div class="section-body">
+        <div class="row g-4">
+          <!-- Languages -->
+          <div class="col-12 col-md-6">
+            <div class="card glass h-100 text-start">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Languages</h5>
 
-        <!-- Progress Bars -->
-        <!-- Python -->
-        <div class="skill-row mb-3 d-flex align-items-center gap-3">
-          <div class="label fw-semibold">Python</div>
-          <div class="flex-grow-1">
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Python"
-              aria-valuenow="80"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div class="progress-bar bg-purple" style="width: 80%">80%</div>
-            </div>
-          </div>
-        </div>
+                <!-- Python -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-python">
+                    <i class="fa-brands fa-python me-2 text-info"></i> Python
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-python"
+                        style="--target-width: 85%"
+                      >
+                        85%
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <!-- HTML/CSS -->
-        <div class="skill-row mb-3 d-flex align-items-center gap-3">
-          <div class="label fw-semibold">HTML/CSS</div>
-          <div class="flex-grow-1">
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="HTML/CSS"
-              aria-valuenow="60"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div class="progress-bar bg-info text-dark" style="width: 60%">
-                60%
+                <!-- C -->
+                <div class="skill-row d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-c">
+                    <i class="fa-solid fa-c me-2 text-light"></i> C
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-c"
+                        style="--target-width: 60%"
+                      >
+                        60%
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- JavaScript/TypeScript -->
-        <div class="skill-row d-flex align-items-center gap-3">
-          <div class="label fw-semibold">JavaScript/TypeScript</div>
-          <div class="flex-grow-1">
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="JS/TS"
-              aria-valuenow="50"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div class="progress-bar bg-warning text-dark" style="width: 50%">
-                50%
+          <!-- Frontend -->
+          <div class="col-12 col-md-6">
+            <div class="card glass h-100 text-start">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Frontend</h5>
+
+                <!-- HTML/CSS -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-htmlcss">
+                    <i class="fa-brands fa-html5 me-1 text-danger"></i> HTML/CSS
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-htmlcss"
+                        style="--target-width: 75%"
+                      >
+                        75%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TypeScript/JavaScript -->
+                <div class="skill-row d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-tsjs">
+                    <i class="fa-brands fa-js me-2 text-warning"></i>
+                    TypeScript/JavaScript
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-tsjs"
+                        style="--target-width: 60%"
+                      >
+                        60%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-12">
+            <div class="card glass text-start">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Backend</h5>
+
+                <!-- Django -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-django">
+                    <i class="fa-brands fa-python me-2 text-success"></i> Django
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-django"
+                        style="--target-width: 80%"
+                      >
+                        80%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Node.js -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-node">
+                    <i class="fa-brands fa-node me-2 text-success"></i> Node.js
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="65"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-node"
+                        style="--target-width: 65%"
+                      >
+                        65%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Express -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-express">
+                    <i class="fa-solid fa-server me-2 text-light"></i> Express
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-express"
+                        style="--target-width: 60%"
+                      >
+                        60%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="skill-row mb-3 d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-mysql">
+                    <i class="fa-solid fa-database me-2 text-info"></i> MySQL
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="70"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-mysql"
+                        style="--target-width: 70%"
+                      >
+                        70%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="skill-row d-flex align-items-center gap-3">
+                  <div class="label fw-semibold skill-postgresql">
+                    <i class="fa-solid fa-database me-2 text-primary"></i>
+                    PostgreSQL
+                  </div>
+                  <div class="flex-grow-1">
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar pb-postgresql"
+                        style="--target-width: 60%"
+                      >
+                        60%
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -199,78 +367,84 @@
 
       <div class="section-body">
         <div class="row g-4">
-          <!-- Card 1 -->
+          <!-- iRbs -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card glass h-100">
               <img
                 class="card-img-top project-thumb"
-                src="https://picsum.photos/640/360?random=1"
-                alt="Project 1"
+                src="./assets/irbs.png"
+                alt="irbs"
               />
               <div class="card-body text-start">
-                <h5 class="card-title">Night Sky Portfolio</h5>
-                <p class="card-text">
-                  비디오 배경 + 글로우 타이틀 + 오버레이 메뉴를 갖춘 포트폴리오
-                  템플릿.
-                </p>
+                <h5 class="card-title">inje bus reservation system</h5>
+                <p class="card-text">Univ bus reservation website</p>
                 <div class="d-flex gap-2">
-                  <a href="#" class="btn btn-info text-dark btn-sm"
+                  <a
+                    href="https://inje-bus.vercel.app/"
+                    class="btn btn-info text-dark btn-sm"
                     ><i class="bi bi-box-arrow-up-right"></i> Live</a
                   >
-                  <a href="#" class="btn btn-outline-light btn-sm"
+                  <a
+                    href="https://github.com/inje-megabrain/irBs"
+                    class="btn btn-outline-light btn-sm"
                     ><i class="bi bi-github"></i> Code</a
                   >
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 2 -->
+          <!-- pet website -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card glass h-100">
               <img
                 class="card-img-top project-thumb"
-                src="https://picsum.photos/640/360?random=2"
-                alt="Project 2"
+                src="./assets/pet.png"
+                alt="pet website"
               />
               <div class="card-body text-start">
-                <h5 class="card-title">Landing Page</h5>
+                <h5 class="card-title">pet info website</h5>
                 <p class="card-text">
-                  부트스트랩 컴포넌트로 빠르게 구축한 랜딩 페이지.
+                  worked on back end with Django (pet stores and hospital)
                 </p>
                 <div class="d-flex gap-2">
-                  <a href="#" class="btn btn-info text-dark btn-sm"
+                  <a href="#not available" class="btn btn-info text-dark btn-sm"
                     ><i class="bi bi-box-arrow-up-right"></i> Live</a
                   >
-                  <a href="#" class="btn btn-outline-light btn-sm"
+                  <a
+                    href="https://github.com/jae04min/Back"
+                    class="btn btn-outline-light btn-sm"
                     ><i class="bi bi-github"></i> Code</a
                   >
                 </div>
               </div>
             </div>
           </div>
-          <!-- Card 3 -->
+          <!-- threetimes -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card glass h-100">
               <img
                 class="card-img-top project-thumb"
-                src="https://picsum.photos/640/360?random=3"
+                src="./assets/threetimes.png"
                 alt="Project 3"
               />
               <div class="card-body text-start">
-                <h5 class="card-title">UI Components</h5>
-                <p class="card-text">버튼/카드/네비게이션 커스텀 컬렉션.</p>
+                <h5 class="card-title">threetimes clone coding</h5>
+                <p class="card-text">
+                  threetiems onlineshopping mall clone coding(in progress)
+                </p>
                 <div class="d-flex gap-2">
-                  <a href="#" class="btn btn-info text-dark btn-sm"
+                  <a href="#not available" class="btn btn-info text-dark btn-sm"
                     ><i class="bi bi-box-arrow-up-right"></i> Live</a
                   >
-                  <a href="#" class="btn btn-outline-light btn-sm"
+                  <a
+                    href="https://github.com/2025-NewOne/BE_Shopping/"
+                    class="btn btn-outline-light btn-sm"
                     ><i class="bi bi-github"></i> Code</a
                   >
                 </div>
               </div>
             </div>
           </div>
-          <!-- 필요하면 카드 더 추가 -->
         </div>
       </div>
     </section>
@@ -285,95 +459,29 @@
             <div class="card glass h-100 text-start">
               <div class="card-body">
                 <h5 class="card-title mb-3">
-                  <i class="bi bi-chat-dots"></i> 연락하기
+                  <i class="bi bi-chat-dots"></i> contact me
                 </h5>
                 <p class="mb-2">
-                  <i class="bi bi-envelope"></i>
+                  <i class="bi bi-envelope text-white"></i>
                   <a href="mailto:you@example.com" class="link-light"
-                    >you@example.com</a
+                    >yjst0702@gmail.com</a
                   >
                 </p>
-                <p class="mb-4">
-                  <i class="bi bi-geo-alt"></i> Sydney, Australia
+                <p class="mb-4 text-white">
+                  <i class="bi bi-geo-alt text-white"></i> Sydney, Australia
                 </p>
                 <div class="d-flex gap-2">
                   <a
                     class="btn btn-outline-light icon-btn"
                     target="_blank"
-                    href="https://github.com/your-id"
+                    href="https://github.com/yjst0702"
                   >
                     <i class="bi bi-github"></i> GitHub
-                  </a>
-                  <a
-                    class="btn btn-outline-light icon-btn"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/your-id"
-                  >
-                    <i class="bi bi-linkedin"></i> LinkedIn
-                  </a>
-                  <a
-                    class="btn btn-outline-light icon-btn"
-                    target="_blank"
-                    href="https://x.com/your-id"
-                  >
-                    <i class="bi bi-twitter-x"></i> X
-                  </a>
+                  </a>  
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Form Card (정적: mailto 또는 Formspree 사용 가능) -->
-          <div class="col-12 col-md-7">
-            <div class="card glass h-100 text-start">
-              <div class="card-body">
-                <h5 class="card-title mb-3">
-                  <i class="bi bi-send"></i> 메시지 보내기
-                </h5>
-                <!-- mailto 간단 폼: 전송 시 사용자의 메일 클라이언트가 열립니다 -->
-                <form
-                  action="mailto:you@example.com"
-                  method="post"
-                  enctype="text/plain"
-                >
-                  <div class="mb-3">
-                    <label class="form-label">이름</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control bg-glass"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">이메일</label>
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control bg-glass"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">메시지</label>
-                    <textarea
-                      name="message"
-                      rows="4"
-                      class="form-control bg-glass"
-                      required
-                    ></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-info text-dark icon-btn">
-                    <i class="bi bi-cursor-fill"></i> 보내기
-                  </button>
-                </form>
-
-                <!-- ※ 완전 웹 전송을 원하면 Formspree 같은 서비스를 쓰세요.
-            <form action="https://formspree.io/f/your-id" method="POST"> ... </form> -->
-              </div>
-            </div>
-          </div>
-        </div>
+          </div>           
       </div>
     </section>
 

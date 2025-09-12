@@ -7,7 +7,6 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* base */
 html {
   font-size: 70.5%;
   scroll-behavior: smooth;
@@ -22,7 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-/* bg-vid */
 .video-bg {
   position: fixed;
   top: 0;
@@ -99,7 +97,6 @@ nav li a:hover {
   transform: scale(1.2);
 }
 
-/* menu animation */
 .slide-in-1 {
   animation: slide-in 0.4s linear 0.2s both;
 }
@@ -150,7 +147,6 @@ nav li a:hover {
   }
 }
 
-/* stacked(?) buttons */
 .hamburger-menu {
   position: fixed;
   top: 1rem;
@@ -174,7 +170,6 @@ nav li a:hover {
   margin-left: auto;
 }
 
-/* stacked button animation */
 .active .menu-bar1 {
   transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
 }
@@ -185,7 +180,6 @@ nav li a:hover {
   transform: rotate(45deg) translate(-0.6rem, -0.8rem);
 }
 
-/* main contents */
 .content {
   position: relative;
   height: 100vh;
@@ -246,7 +240,6 @@ p.lead {
   }
 }
 
-/* 섹션 공통 */
 section {
   width: 100%;
   height: 100vh;
@@ -288,7 +281,7 @@ section h1.section-title {
   margin-inline: auto;
   padding: clamp(1rem, 3vw, 2rem);
 }
-/*for icons*/
+
 .floating {
   animation: float 4s ease-in-out infinite;
 }
@@ -326,21 +319,102 @@ section h1.section-title {
 }
 
 .badge.skill-badge {
-  font-size: 1.4rem; /* 글자 크기 ↑ (기본 0.75rem) */
-  padding: 0.6rem 1.2rem; /* 안쪽 여백 ↑ */
-  border-radius: 999px; /* pill 느낌 더 강조 */
+  font-size: 1.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
 }
 
 .progress {
-  height: 2.2rem; /* 바 높이 (기본 1rem → 2.2rem) */
+  height: 2.2rem;
   border-radius: 12px;
 }
 
 .progress-bar {
-  font-size: 1.2rem; /* 퍼센트 텍스트 크기 ↑ */
+  font-size: 1.2rem;
   font-weight: 600;
-  line-height: 2.2rem; /* 진행바 중앙에 텍스트 정렬 */
+  line-height: 2.2rem;
+  width: 0;
+  animation: fillBar 2s ease forwards;
+}
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
 }
 .progress-bar.bg-purple {
-  background-color: #9b59b6; /* 보라색 */
+  background-color: #9b59b6;
+}
+.card-title {
+  color: #fff;
+}
+.card-text {
+  color: rgb(211, 209, 209);
+}
+
+.pb-python {
+  background-color: #3776ab;
+  color: #fff;
+}
+.pb-c {
+  background-color: #a8b9cc;
+  color: #111;
+}
+.pb-htmlcss {
+  background-color: #e34f26;
+  color: #fff;
+}
+.pb-tsjs {
+  background-color: #f7df1e;
+  color: #111;
+}
+.pb-django {
+  background-color: #092e20;
+  color: #fff;
+}
+.pb-node {
+  background-color: #68a063;
+  color: #fff;
+}
+.pb-express {
+  background-color: #404d59;
+  color: #fff;
+}
+.pb-mysql {
+  background-color: #4479a1;
+  color: #fff;
+}
+.pb-postgresql {
+  background-color: #336791;
+  color: #fff;
+}
+
+.skill-python {
+  color: #3776ab;
+}
+.skill-c {
+  color: #a8b9cc;
+}
+.skill-htmlcss {
+  color: #e34f26;
+}
+.skill-tsjs {
+  color: #f7df1e;
+}
+.skill-django {
+  color: #15402f;
+}
+.skill-node {
+  color: #68a063;
+}
+.skill-express {
+  color: #404d59;
+}
+.skill-mysql {
+  color: #4479a1;
+}
+.skill-postgresql {
+  color: #336791;
 }
